@@ -28,6 +28,9 @@ __pycache__/
 # Model checkpoints (large .pt files)
 checkpoints/
 
+# Personal AI assistant config
+.claude/
+
 # Conda / Anaconda
 anaconda_projects/
 

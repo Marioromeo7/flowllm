@@ -10,12 +10,12 @@ import matplotlib.ticker as ticker
 os.makedirs("plots", exist_ok=True)
 
 VARIANTS = [
-    ("A",      "checkpoints/variant_a/loss_log.csv",           "#2196F3", "-",  "A — Pure GRU (2.204)"),
-    ("B",      "checkpoints/variant_b/loss_log.csv",           "#4CAF50", "-",  "B — Per-layer notepad (2.304)"),
-    ("C-corr", "checkpoints/variant_c_corrected/loss_log.csv", "#FF9800", "-",  "C-corr — Shared notepad corrected (2.523)"),
-    ("D",      "checkpoints/variant_d/loss_log.csv",           "#9C27B0", "-",  "D — Shared notepad + attention (2.322)"),
-    ("E",      "checkpoints/variant_e/loss_log.csv",           "#F44336", "--", "E — Transformer (3.266)"),
-    ("C",      "checkpoints/variant_c/loss_log.csv",           "#795548", ":",  "C — Shared notepad naive (3.460)"),
+    ("A",      "logs/variant_a_loss.csv",           "#2196F3", "-",  "A — Pure GRU (2.204)"),
+    ("B",      "logs/variant_b_loss.csv",           "#4CAF50", "-",  "B — Per-layer notepad (2.304)"),
+    ("C-corr", "logs/variant_c_corrected_loss.csv", "#FF9800", "-",  "C-corr — Shared notepad corrected (2.523)"),
+    ("D",      "logs/variant_d_loss.csv",           "#9C27B0", "-",  "D — Shared notepad + attention (2.322)"),
+    ("E",      "logs/variant_e_loss.csv",           "#F44336", "--", "E — Transformer (3.266)"),
+    ("C",      "logs/variant_c_naive_loss.csv",     "#795548", ":",  "C — Shared notepad naive (3.460)"),
 ]
 
 WINDOW = 10   # rolling mean window for smoothing
@@ -43,7 +43,7 @@ for vid, path, color, ls, label in VARIANTS:
 
 ax.set_xlabel("Training Step", fontsize=12)
 ax.set_ylabel("Cross-Entropy Loss (nats)", fontsize=12)
-ax.set_title("FlowLLM Phase 1 — Loss Curves\n"
+ax.set_title("RiverNet Phase 1 — Loss Curves\n"
              "TinyStories · d=1024 · 6 layers · ~140–153M params · RTX 3050 4GB",
              fontsize=12)
 
