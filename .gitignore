@@ -1,3 +1,7 @@
+# Paper source (submitted to arXiv — kept local only)
+flowllm_phase1_paper.tex
+flowllm_research_plan.md
+
 # LaTeX build artifacts
 *.aux
 *.log
